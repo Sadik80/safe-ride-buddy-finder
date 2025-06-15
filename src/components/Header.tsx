@@ -18,7 +18,7 @@ export default function Header() {
       <div className="flex items-center justify-between py-3 px-6 lg:px-16">
         <Link to="/" className="flex items-center gap-2 text-white font-bold text-2xl">
           {/* Removed 'directions_car' icon */}
-          Busway
+          Busway <span className="font-light text-xl ml-2">Safe Ride</span>
         </Link>
         <nav className="hidden md:flex gap-6 font-semibold">
           {navLinks.map(link => (
