@@ -20,7 +20,7 @@ export default function Index() {
           Welcome to Busway
         </h1>
         <p
-          className="text-lg md:text-2xl text-yellow-900 mb-7 text-center max-w-2xl mx-auto drop-shadow"
+          className="text-lg md:text-2xl text-white mb-7 text-center max-w-2xl mx-auto drop-shadow"
           style={{ textShadow: "0 1px 6px #fff9" }}
         >
           Helping students find bus services by connecting schools with available seats on their routes.
