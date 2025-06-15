@@ -18,9 +18,6 @@ export default function Index() {
         </p>
         <BusRouteForm />
       </main>
-      <footer className="absolute bottom-0 left-0 w-full p-5 bg-teal-900/90 text-blue-100 text-center text-sm">
-        &copy; {new Date().getFullYear()} Safe Ride. All rights reserved.
-      </footer>
     </div>
   );
 }
