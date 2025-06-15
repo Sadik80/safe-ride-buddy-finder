@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import AuthDialog from "./AuthDialog";
@@ -99,7 +98,7 @@ export default function AvailableBusesTable() {
         disabled={selected === null}
         onClick={() => setShowAuth(true)}
       >
-        Confirm
+        Submit Request
       </Button>
       <AuthDialog open={showAuth} onOpenChange={setShowAuth} onDone={handleAuthDone} />
     </div>
