@@ -17,7 +17,7 @@ export default function Index() {
           className="text-5xl font-extrabold text-yellow-700 drop-shadow-lg mb-4 text-center"
           style={{ textShadow: "0 2px 10px #fff7" }}
         >
-          Welcome to Safe Ride
+          Welcome to Busway
         </h1>
         <p
           className="text-lg md:text-2xl text-yellow-900 mb-7 text-center max-w-2xl mx-auto drop-shadow"
