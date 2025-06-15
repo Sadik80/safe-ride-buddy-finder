@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import BusRouteForm from "@/components/BusRouteForm";
 
@@ -20,9 +19,11 @@ export default function Index() {
         >
           Welcome to Safe Ride
         </h1>
-        <p className="text-lg md:text-2xl text-yellow-900 mb-7 text-center max-w-2xl mx-auto drop-shadow"
-           style={{ textShadow: "0 1px 6px #fff9" }}>
-          Find the safest school bus options for your child.
+        <p
+          className="text-lg md:text-2xl text-yellow-900 mb-7 text-center max-w-2xl mx-auto drop-shadow"
+          style={{ textShadow: "0 1px 6px #fff9" }}
+        >
+          Helping students find bus services by connecting schools with available seats on their routes.
         </p>
         <BusRouteForm />
       </main>
