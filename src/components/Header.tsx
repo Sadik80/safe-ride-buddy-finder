@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { useState } from "react";
@@ -18,7 +17,7 @@ export default function Header() {
       <div className="flex items-center justify-between py-3 px-6 lg:px-16">
         <Link to="/" className="flex items-center gap-2 text-white font-bold text-2xl">
           <span className="material-icons text-3xl mr-2" aria-hidden="true">directions_car</span>
-          Safe Ride
+          Busway
         </Link>
         <nav className="hidden md:flex gap-6 font-semibold">
           {navLinks.map(link => (
