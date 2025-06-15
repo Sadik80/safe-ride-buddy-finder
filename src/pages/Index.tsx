@@ -14,8 +14,8 @@ export default function Index() {
       <Header />
       <main className="lg:pt-24 pt-12 px-2 flex flex-col items-center">
         <h1
-          className="text-5xl font-extrabold text-green-700 drop-shadow-lg mb-4 text-center"
-          style={{ textShadow: "0 2px 10px #fff7" }}
+          className="text-5xl font-extrabold text-white drop-shadow-lg mb-4 text-center"
+          style={{ textShadow: "0 2px 10px #38b2acaa" }} // teal shadow for theme
         >
           Welcome to Busway
         </h1>
