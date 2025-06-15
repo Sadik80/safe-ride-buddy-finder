@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { toast } from "@/hooks/use-toast";
 
-export default function AuthDialog({ open, onOpenChange }: { open: boolean, onOpenChange: (v: boolean) => void }) {
+export default function AuthDialog({ open, onOpenChange, onDone }: { open: boolean, onOpenChange: (v: boolean) => void, onDone?: () => void }) {
+  // If onDone is provided, use it as the callback
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-md rounded-2xl">
@@ -16,10 +17,18 @@ export default function AuthDialog({ open, onOpenChange }: { open: boolean, onOp
             <TabsTrigger value="login" className="py-2">Login</TabsTrigger>
           </TabsList>
           <TabsContent value="signin">
-            <SignInForm onDone={() => { toast({title: "Sign In Successful"}); onOpenChange(false); }} />
+            <SignInForm onDone={() => {
+              toast({title: "Sign In Successful"});
+              onOpenChange(false);
+              if (onDone) onDone();
+            }} />
           </TabsContent>
           <TabsContent value="login">
-            <LoginForm onDone={() => { toast({title: "Login Successful"}); onOpenChange(false); }} />
+            <LoginForm onDone={() => {
+              toast({title: "Login Successful"});
+              onOpenChange(false);
+              if (onDone) onDone();
+            }} />
           </TabsContent>
         </Tabs>
       </DialogContent>
@@ -118,3 +127,4 @@ function LoginForm({ onDone }: { onDone: () => void }) {
     </form>
   );
 }
+

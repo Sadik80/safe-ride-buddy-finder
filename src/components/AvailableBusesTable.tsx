@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import AuthDialog from "./AuthDialog";
+import { toast } from "@/hooks/use-toast";
 
 type Bus = {
   srNo: number;
@@ -40,6 +41,14 @@ const buses: Bus[] = [
 export default function AvailableBusesTable() {
   const [selected, setSelected] = useState<number | null>(null);
   const [showAuth, setShowAuth] = useState(false);
+
+  // Custom handler when sign in/login completes
+  function handleAuthDone() {
+    setShowAuth(false);
+    toast({
+      title: "Your request has been sent and you will be updated by college administration via text message",
+    });
+  }
 
   return (
     <div className="w-full mx-auto max-w-3xl mt-10 bg-white/90 shadow-xl p-5 rounded-2xl">
@@ -92,7 +101,7 @@ export default function AvailableBusesTable() {
       >
         Confirm
       </Button>
-      <AuthDialog open={showAuth} onOpenChange={setShowAuth} />
+      <AuthDialog open={showAuth} onOpenChange={setShowAuth} onDone={handleAuthDone} />
     </div>
   );
 }
