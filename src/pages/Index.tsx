@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import BusRouteForm from "@/components/BusRouteForm";
 
 const backgroundImage =
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"; // Example: scenic/road/bus image
+  "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1200&q=80"; // School bus image
 
 export default function Index() {
   return (
